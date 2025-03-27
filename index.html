@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saransh Bogati | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        dark: '#1f2937',
+                        light: '#f9fafb',
+                        accent: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .skill-pill {
+            transition: all 0.2s ease;
+        }
+
+        .skill-pill:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-light text-dark">
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-16">
+            <h1 class="text-2xl font-bold text-primary">Saransh Bogati</h1>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#about" class="font-medium hover:text-secondary transition">About</a></li>
+                    <li><a href="#skills" class="font-medium hover:text-secondary transition">Skills</a></li>
+                    <li><a href="#experience" class="font-medium hover:text-secondary transition">Experience</a></li>
+                    <li><a href="#projects" class="font-medium hover:text-secondary transition">Projects</a></li>
+                    <li><a href="#contact" class="font-medium hover:text-secondary transition">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <section class="mb-24 text-center">
+            <h2 class="text-4xl font-bold mb-4">Hi, I'm Saransh Bogati</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">Computer Science graduate student specializing in
+                backend development and cloud architecture.</p>
+            <a href="/resume.pdf" download
+                class="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-secondary transition shadow-md">
+                Download Resume
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="mb-24">
+            <h2 class="text-3xl font-bold mb-6 text-primary">About Me</h2>
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <p class="text-lg leading-relaxed">I'm a Computer Science graduate student at Florida State University
+                    with expertise in backend development, cloud solutions, and system architecture. I specialize in
+                    building high-performance, scalable applications using modern technologies and best practices.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="mb-24">
+            <h2 class="text-3xl font-bold mb-6 text-primary">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">Python</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium">C#</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full font-medium">JavaScript</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">TypeScript</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full font-medium">SQL</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">Frameworks & Libraries</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="skill-pill px-4 py-2 bg-teal-100 text-teal-800 rounded-full font-medium">FastAPI</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">Node.js</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Express.js</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium">.NET</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">SQLAlchemy</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="skill-pill px-4 py-2 bg-orange-100 text-orange-800 rounded-full font-medium">Git</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">Docker</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-orange-100 text-orange-800 rounded-full font-medium">AWS</span>
+                        <span class="skill-pill px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">GitHub
+                            Actions</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-orange-100 text-orange-800 rounded-full font-medium">Postman</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">Swagger</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4">Databases</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="skill-pill px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full font-medium">PostgreSQL</span>
+                        <span
+                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">MySQL</span>
+                        <span class="skill-pill px-4 py-2 bg-red-100 text-red-800 rounded-full font-medium">MSSQL</span>
+                        <span class="skill-pill px-4 py-2 bg-red-100 text-red-800 rounded-full font-medium">Redis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="mb-24">
+            <h2 class="text-3xl font-bold mb-6 text-primary">Professional Experience</h2>
+
+            <div class="space-y-8">
+                <!-- Experience 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Octacore Solutions</h3>
+                        <span class="text-gray-500">2022 - 2023</span>
+                    </div>
+                    <p class="text-accent font-medium mb-4">Software Developer</p>
+                    <p class="mb-4">Built backend services and API integrations with focus on performance optimization.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Python</span>
+                        <span
+                            class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Node.js</span>
+                        <span class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
+                        <span
+                            class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">CI/CD</span>
+                    </div>
+                </div>
+
+
+                <!-- Experience 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Bask Solutions</h3>
+                        <span class="text-gray-500">2021 - 2022</span>
+                    </div>
+                    <p class="text-accent font-medium mb-4">Software Engineer</p>
+                    <p class="mb-4">Enhanced NLP capabilities and cloud infrastructure for Instaline delivery platform.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-pill px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">FastAPI</span>
+                        <span
+                            class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
+                        <span class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Redis</span>
+                        <span class="skill-pill px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">AWS</span>
+                        <span class="skill-pill px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Rasa</span>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold">Nepasoft Solutions Pvt Ltd</h3>
+                        <span class="text-gray-500">2019 - 2021</span>
+                    </div>
+                    <p class="text-accent font-medium mb-4">Backend Developer</p>
+                    <p class="mb-4">Developed and maintained e-discovery products with focus on backend architecture and
+                        API integrations.</p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
+                        <span class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
+                        <span
+                            class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
+                        <span class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">REST
+                            APIs</span>
+                        <span
+                            class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Microservices</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="mb-24">
+            <h2 class="text-3xl font-bold mb-6 text-primary">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-bold mb-2">TicTacToe Telnet</h3>
+                    <p class="text-gray-600 mb-4">Multiplayer game with real-time messaging using socket programming.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="skill-pill px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">C++</span>
+                        <span class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Socket
+                            Programming</span>
+                    </div>
+                    <a href="#" class="text-primary font-medium hover:underline">View Project →</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-bold mb-2">Europaa Inventory</h3>
+                    <p class="text-gray-600 mb-4">Inventory management system with real-time tracking.</p>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span
+                            class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">.NET</span>
+                        <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">SQL</span>
+                    </div>
+                    <a href="#" class="text-primary font-medium hover:underline">View Project →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-primary">Get In Touch</h2>
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <p class="mb-6">I'm currently looking for new opportunities. Feel free to reach out!</p>
+                <div class="flex space-x-4">
+                    <a href="mailto:saransh.bogati@example.com"
+                        class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition">
+                        Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/saranshb"
+                        class="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-blue-50 transition">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500">
+            <p>© 2023 Saransh Bogati. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
