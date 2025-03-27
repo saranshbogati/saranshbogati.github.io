@@ -78,17 +78,14 @@
             </a>
         </section>
 
-        <!-- About
-        <section id="about" class="mb-24">
-            <h2 class="text-3xl font-bold mb-6 text-primary">About Me</h2>
-            <div class="bg-white p-8 rounded-xl shadow-sm">
-                <p class="text-lg leading-relaxed">I'm a Computer Science graduate student at Florida State University
-                    with expertise in backend development, cloud solutions, and system architecture. I specialize in
-                    building high-performance, scalable applications using modern technologies and best practices.</p>
-            </div>
-        </section> -->
         <section id="education" class="mb-24">
-            <h2 class="text-3xl font-bold mb-6 text-primary">Education</h2>
+
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Education</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
+
             <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="text-xl font-bold">Florida State University</h3>
@@ -100,137 +97,381 @@
         </section>
         <!-- Skills -->
         <section id="skills" class="mb-24">
-            <h2 class="text-3xl font-bold mb-6 text-primary">Technical Skills</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
-                    <div class="flex flex-wrap gap-3">
+
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Skills</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Languages Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
                         <span
-                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">Python</span>
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Python
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium">C#</span>
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            C#
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full font-medium">JavaScript</span>
+                            class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                            JavaScript
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">TypeScript</span>
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            TypeScript
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full font-medium">SQL</span>
+                            class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                            SQL
+                        </span>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-semibold mb-4">Frameworks & Libraries</h3>
-                    <div class="flex flex-wrap gap-3">
+                <!-- Frameworks Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
                         <span
-                            class="skill-pill px-4 py-2 bg-teal-100 text-teal-800 rounded-full font-medium">FastAPI</span>
+                            class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+                            FastAPI
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">Node.js</span>
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Node.js
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">Express.js</span>
+                            class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-gray-500 rounded-full mr-2"></span>
+                            Express.js
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium">.NET</span>
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            .NET
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">SQLAlchemy</span>
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            SQLAlchemy
+                        </span>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-semibold mb-4">Tools & Platforms</h3>
-                    <div class="flex flex-wrap gap-3">
+                <!-- Tools Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-orange-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Tools & Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
                         <span
-                            class="skill-pill px-4 py-2 bg-orange-100 text-orange-800 rounded-full font-medium">Git</span>
+                            class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                            Git
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">Docker</span>
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Docker
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-orange-100 text-orange-800 rounded-full font-medium">AWS</span>
-                        <span class="skill-pill px-4 py-2 bg-gray-100 text-gray-800 rounded-full font-medium">GitHub
-                            Actions</span>
+                            class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-orange-400 rounded-full mr-2"></span>
+                            AWS
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-orange-100 text-orange-800 rounded-full font-medium">Postman</span>
+                            class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-gray-500 rounded-full mr-2"></span>
+                            GitHub Actions
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-green-100 text-green-800 rounded-full font-medium">Swagger</span>
+                            class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                            Postman
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Swagger
+                        </span>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-semibold mb-4">Databases</h3>
-                    <div class="flex flex-wrap gap-3">
+                <!-- Databases Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-indigo-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
                         <span
-                            class="skill-pill px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full font-medium">PostgreSQL</span>
+                            class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                            PostgreSQL
+                        </span>
                         <span
-                            class="skill-pill px-4 py-2 bg-blue-100 text-blue-800 rounded-full font-medium">MySQL</span>
-                        <span class="skill-pill px-4 py-2 bg-red-100 text-red-800 rounded-full font-medium">MSSQL</span>
-                        <span class="skill-pill px-4 py-2 bg-red-100 text-red-800 rounded-full font-medium">Redis</span>
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            MySQL
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                            MSSQL
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                            Redis
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Other Skills Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-teal-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Other Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            RESTful APIs
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            CI/CD Pipelines
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Agile Methodologies
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+                            Microservices
+                        </span>
+                    </div>
+                </div>
+                <!-- Soft Skills Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-pink-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                            Team Leadership
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            Problem Solving
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Communication
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                            Mentoring
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                            Adaptability
+                        </span>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Experience -->
         <section id="experience" class="mb-24">
-            <h2 class="text-3xl font-bold mb-6 text-primary">Professional Experience</h2>
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Professional Experience</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
 
-            <div class="space-y-8">
+            <div class="relative">
+                <!-- Vertical timeline line -->
+                <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2 md:left-1/2">
+                </div>
+
                 <!-- Experience 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold">Octacore Solutions</h3>
-                        <span class="text-gray-500">2022 - 2023</span>
+                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                    <!-- Timeline dot -->
+                    <div
+                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
                     </div>
-                    <p class="text-accent font-medium mb-4">Technical Lead</p>
-                    <p class="mb-4">Built backend services and API integrations with focus on performance optimization.
-                    </p>
 
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Python</span>
-                        <span
-                            class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Node.js</span>
-                        <span class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
-                        <span
-                            class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">CI/CD</span>
+                    <!-- Year marker -->
+                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                        <div class="text-lg font-semibold text-gray-500 md:text-right">2022 - 2023</div>
+                    </div>
+
+                    <!-- Experience content -->
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="text-xl font-bold mb-2">Octacore Solutions</h3>
+                            <p class="text-accent font-medium mb-4">Technical Lead</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
+                                <li>Led a team of 5 developers to build scalable backend services</li>
+                                <li>Optimized API response times by 40% through query optimization</li>
+                                <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                                <li>Designed microservices architecture for new product line</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Python</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Node.js</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">CI/CD</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-
                 <!-- Experience 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold">Bask Solutions</h3>
-                        <span class="text-gray-500">2021 - 2022</span>
+                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                    <div
+                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
                     </div>
-                    <p class="text-accent font-medium mb-4">Software Consultant</p>
-                    <p class="mb-4">Enhanced NLP capabilities and cloud infrastructure for Instaline delivery platform.
-                    </p>
 
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">FastAPI</span>
-                        <span
-                            class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
-                        <span class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Redis</span>
-                        <span class="skill-pill px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">AWS</span>
-                        <span class="skill-pill px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Rasa</span>
+                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                        <div class="text-lg font-semibold text-gray-500 md:text-right">2021 - 2022</div>
+                    </div>
+
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="text-xl font-bold mb-2">Bask Solutions</h3>
+                            <p class="text-accent font-medium mb-4">Software Consultant</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
+                                <li>Developed NLP features using Rasa for customer support automation</li>
+                                <li>Integrated AWS services (EC2, S3, SQS) into existing infrastructure</li>
+                                <li>Reduced server costs by 30% through resource optimization</li>
+                                <li>Mentored junior developers in API best practices</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="skill-pill px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">FastAPI</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Redis</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">AWS</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Rasa</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Experience 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3 class="text-xl font-bold">Nepasoft Solutions Pvt Ltd</h3>
-                        <span class="text-gray-500">2019 - 2021</span>
+                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                    <div
+                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
                     </div>
-                    <p class="text-accent font-medium mb-4">Full Stack Developer</p>
-                    <p class="mb-4">Developed and maintained e-discovery products with focus on backend architecture and
-                        API integrations.</p>
 
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
-                        <span class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
-                        <span
-                            class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
-                        <span class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">REST
-                            APIs</span>
-                        <span
-                            class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Microservices</span>
+                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                        <div class="text-lg font-semibold text-gray-500 md:text-right">2019 - 2021</div>
+                    </div>
+
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="text-xl font-bold mb-2">Nepasoft Solutions Pvt Ltd</h3>
+                            <p class="text-accent font-medium mb-4">Full Stack Developer</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
+                                <li>Developed e-discovery platform handling 10K+ daily users</li>
+                                <li>Implemented search functionality with Elasticsearch integration</li>
+                                <li>Reduced API response times by implementing caching with Redis</li>
+                                <li>Collaborated with legal teams to understand domain requirements</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">REST
+                                    APIs</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Microservices</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,7 +479,11 @@
 
         <!-- Projects -->
         <section id="projects" class="mb-24">
-            <h2 class="text-3xl font-bold mb-6 text-primary">Projects</h2>
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Projects</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
                     <h3 class="text-xl font-bold mb-2">TicTacToe Telnet</h3>
@@ -267,13 +512,17 @@
             </div>
         </section>
 
-        <!-- Contact -->
+
         <!-- Contact -->
         <section id="contact" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6 text-primary">Get In Touch</h2>
-            <div class="bg-white p-8 rounded-xl shadow-sm">
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Get in touch</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
                 <p class="mb-6">I'm currently looking for new opportunities. Feel free to reach out!</p>
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-wrap gap-4 justify-center">
                     <a href="mailto:saranshbogati1997@gmail.com"
                         class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition">
                         Email Me
