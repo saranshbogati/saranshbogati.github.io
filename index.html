@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saransh Bogati | Software Engineer</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
+
     <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style">
+
     <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -79,76 +80,83 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        
+
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: transparent;
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: #cbd5e1;
             border-radius: 4px;
         }
-        
+
         .dark ::-webkit-scrollbar-thumb {
             background: #475569;
         }
-        
+
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
-        
+
         /* Custom animations */
         .skill-pill {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .skill-pill:hover {
             transform: translateY(-2px) scale(1.05);
         }
-        
+
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .card-hover:hover {
             transform: translateY(-4px);
         }
-        
+
         /* Gradient backgrounds */
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        
+
         .dark .gradient-bg {
             background: linear-gradient(135deg, #4c1d95 0%, #1e40af 100%);
         }
-        
+
         /* Glass effect */
         .glass {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .dark .glass {
             background: rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Loading animation */
         .loading {
             animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
         }
     </style>
 </head>
@@ -157,55 +165,78 @@
     <!-- Loading screen -->
     <div id="loading" class="fixed inset-0 bg-white dark:bg-dark-900 flex items-center justify-center z-50">
         <div class="text-center">
-            <div class="w-16 h-16 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin mx-auto mb-4"></div>
+            <div
+                class="w-16 h-16 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin mx-auto mb-4">
+            </div>
             <p class="text-dark-600 dark:text-dark-400">Loading...</p>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border-b border-dark-200 dark:border-dark-700 z-40 transition-all duration-300">
+    <nav
+        class="fixed top-0 w-full bg-white/80 dark:bg-dark-900/80 backdrop-blur-md border-b border-dark-200 dark:border-dark-700 z-40 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+                <h1
+                    class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
                     Saransh Bogati
                 </h1>
-                
+
                 <div class="flex items-center space-x-6">
                     <nav class="hidden md:flex space-x-8">
-                        <a href="#education" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Education</a>
-                        <a href="#skills" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
-                        <a href="#experience" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
-                        <a href="#projects" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</a>
-                        <a href="#contact" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+                        <a href="#education"
+                            class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Education</a>
+                        <a href="#skills"
+                            class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
+                        <a href="#experience"
+                            class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
+                        <a href="#projects"
+                            class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</a>
+                        <a href="#contact"
+                            class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
                     </nav>
-                    
+
                     <!-- Dark mode toggle -->
-                    <button id="darkModeToggle" class="p-2 rounded-lg bg-dark-100 dark:bg-dark-800 hover:bg-dark-200 dark:hover:bg-dark-700 transition-colors">
-                        <svg id="sunIcon" class="w-5 h-5 text-dark-600 dark:text-dark-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    <button id="darkModeToggle"
+                        class="p-2 rounded-lg bg-dark-100 dark:bg-dark-800 hover:bg-dark-200 dark:hover:bg-dark-700 transition-colors">
+                        <svg id="sunIcon" class="w-5 h-5 text-dark-600 dark:text-dark-400 hidden" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
                         </svg>
-                        <svg id="moonIcon" class="w-5 h-5 text-dark-600 dark:text-dark-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        <svg id="moonIcon" class="w-5 h-5 text-dark-600 dark:text-dark-400" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
                         </svg>
                     </button>
-                    
+
                     <!-- Mobile menu button -->
-                    <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-dark-100 dark:bg-dark-800 hover:bg-dark-200 dark:hover:bg-dark-700 transition-colors">
+                    <button id="mobileMenuBtn"
+                        class="md:hidden p-2 rounded-lg bg-dark-100 dark:bg-dark-800 hover:bg-dark-200 dark:hover:bg-dark-700 transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile menu -->
             <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4 border-t border-dark-200 dark:border-dark-700 pt-4">
                 <div class="flex flex-col space-y-4">
-                    <a href="#education" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Education</a>
-                    <a href="#skills" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
-                    <a href="#experience" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
-                    <a href="#projects" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</a>
-                    <a href="#contact" class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+                    <a href="#education"
+                        class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Education</a>
+                    <a href="#skills"
+                        class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
+                    <a href="#experience"
+                        class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
+                    <a href="#projects"
+                        class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</a>
+                    <a href="#contact"
+                        class="font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
                 </div>
             </div>
         </div>
@@ -214,528 +245,705 @@
     <div class="pt-20">
         <div class="max-w-7xl mx-auto px-6 py-12">
 
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden mb-24">
-            <!-- Background gradient -->
-            <div class="absolute inset-0 gradient-bg opacity-10"></div>
-            
-            <!-- Animated background elements -->
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-20 left-20 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-                <div class="absolute top-40 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 1s;"></div>
-                <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
-            </div>
-            
-            <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-                <div class="animate-fade-in">
-                    <h2 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-600 via-purple-600 to-primary-800 bg-clip-text text-transparent">
-                        Hi, I'm Saransh
-                    </h2>
-                    <p class="text-xl md:text-2xl text-dark-600 dark:text-dark-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        Computer Science graduate student specializing in backend development and cloud architecture.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="/allinone.pdf" download="Saransh_Bogati_Resume.pdf"
-                            class="group inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 group-hover:animate-bounce" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                            Download Resume
-                        </a>
-                        <a href="#contact"
-                            class="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transform hover:scale-105 transition-all duration-300">
-                            Get In Touch
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <svg class="w-6 h-6 text-dark-400 dark:text-dark-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
-            </div>
-        </section>
+            <!-- Hero Section -->
+            <section class="relative min-h-screen flex items-center justify-center overflow-hidden mb-24">
+                <!-- Background gradient -->
+                <div class="absolute inset-0 gradient-bg opacity-10"></div>
 
-        <!-- Education Section -->
-        <section id="education" class="mb-24 animate-slide-up">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                    Education
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                        <div>
-                            <h3 class="text-2xl font-bold text-dark-900 dark:text-dark-100">Florida State University</h3>
-                            <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg">Master of Science in Computer Science</p>
-                        </div>
-                        <span class="text-dark-500 dark:text-dark-400 font-medium bg-dark-100 dark:bg-dark-700 px-4 py-2 rounded-lg">
-                            Aug 2023 - May 2025
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-dark-700 dark:text-dark-300 font-medium">GPA: 3.6</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Skills Section -->
-        <section id="skills" class="mb-24 animate-slide-up">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                    Skills & Expertise
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Languages Card -->
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Languages</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
-                            Python
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-700">
-                            C#
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium border border-yellow-200 dark:border-yellow-700">
-                            JavaScript
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
-                            TypeScript
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium border border-indigo-200 dark:border-indigo-700">
-                            SQL
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Frameworks Card -->
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Frameworks</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-full text-sm font-medium border border-teal-200 dark:border-teal-700">
-                            FastAPI
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium border border-green-200 dark:border-green-700">
-                            Node.js
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-600">
-                            Express.js
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-700">
-                            .NET
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
-                            SQLAlchemy
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Tools Card -->
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Tools & Platforms</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-4 py-2 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium border border-orange-200 dark:border-orange-700">
-                            Git
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
-                            Docker
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium border border-orange-200 dark:border-orange-700">
-                            AWS
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-600">
-                            GitHub Actions
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium border border-orange-200 dark:border-orange-700">
-                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                            Postman
-                        </span>
-                        <span
-                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                            Swagger
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Databases Card -->
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Databases</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium border border-indigo-200 dark:border-indigo-700">
-                            PostgreSQL
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
-                            MySQL
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium border border-red-200 dark:border-red-700">
-                            MSSQL
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium border border-red-200 dark:border-red-700">
-                            Redis
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Other Skills Card -->
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Other Skills</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-4 py-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium border border-green-200 dark:border-green-700">
-                            RESTful APIs
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-700">
-                            CI/CD Pipelines
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
-                            Agile Methodologies
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-full text-sm font-medium border border-teal-200 dark:border-teal-700">
-                            Microservices
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Soft Skills Card -->
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                                </path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Soft Skills</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-pill px-4 py-2 bg-pink-50 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full text-sm font-medium border border-pink-200 dark:border-pink-700">
-                            Team Leadership
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
-                            Problem Solving
-                        </span>
-                        <span class="skill-pill px-4 py-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium border border-green-200 dark:border-green-700">
-                            Communication
-                        </span>
-                        <span
-                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
-                            <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                            Mentoring
-                        </span>
-                        <span
-                            class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm font-medium flex items-center">
-                            <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
-                            Adaptability
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Experience Section -->
-        <section id="experience" class="mb-24 animate-slide-up">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                    Professional Experience
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
-            </div>
-
-            <div class="relative">
-                <!-- Vertical timeline line -->
-                <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2 md:left-1/2">
-                </div>
-
-                <!-- Experience 1 -->
-                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
-                    <!-- Timeline dot -->
+                <!-- Animated background elements -->
+                <div class="absolute inset-0 overflow-hidden">
                     <div
-                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
+                        class="absolute top-20 left-20 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float">
                     </div>
-
-                    <!-- Year marker -->
-                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
-                        <div class="text-lg font-semibold text-gray-500 md:text-right">2022 - 2023</div>
-                    </div>
-
-                    <!-- Experience content -->
-                    <div class="md:w-1/2">
-                        <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700">
-                            <div class="flex items-start justify-between mb-4">
-                                <div>
-                                    <h3 class="text-2xl font-bold text-dark-900 dark:text-dark-100 mb-2">Octacore Solutions</h3>
-                                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg">Technical Lead</p>
-                                </div>
-                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <ul class="space-y-3 mb-6 text-dark-700 dark:text-dark-300">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Led a team of 5 developers to build scalable backend services
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Optimized API response times by 40% through query optimization
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Implemented CI/CD pipelines reducing deployment time by 60%
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    Designed microservices architecture for new product line
-                                </li>
-                            </ul>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="skill-pill px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm rounded-full">Python</span>
-                                <span class="skill-pill px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-sm rounded-full">Node.js</span>
-                                <span class="skill-pill px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 text-sm rounded-full">Angular</span>
-                                <span class="skill-pill px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 text-sm rounded-full">CI/CD</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="absolute top-40 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+                        style="animation-delay: 1s;"></div>
+                    <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+                        style="animation-delay: 2s;"></div>
                 </div>
 
-                <!-- Experience 2 -->
-                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
-                    <div
-                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
-                    </div>
-
-                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
-                        <div class="text-lg font-semibold text-gray-500 md:text-right">2021 - 2022</div>
-                    </div>
-
-                    <div class="md:w-1/2">
-                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                            <h3 class="text-xl font-bold mb-2">Bask Solutions</h3>
-                            <p class="text-accent font-medium mb-4">Software Consultant</p>
-                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
-                                <li>Developed NLP features using Rasa for customer support automation</li>
-                                <li>Integrated AWS services (EC2, S3, SQS) into existing infrastructure</li>
-                                <li>Reduced server costs by 30% through resource optimization</li>
-                                <li>Mentored junior developers in API best practices</li>
-                            </ul>
-                            <div class="flex flex-wrap gap-3">
-                                <span
-                                    class="skill-pill px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">FastAPI</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Redis</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">AWS</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Rasa</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
-                    <div
-                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
-                    </div>
-
-                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
-                        <div class="text-lg font-semibold text-gray-500 md:text-right">2019 - 2021</div>
-                    </div>
-
-                    <div class="md:w-1/2">
-                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                            <h3 class="text-xl font-bold mb-2">Nepasoft Solutions Pvt Ltd</h3>
-                            <p class="text-accent font-medium mb-4">Full Stack Developer</p>
-                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
-                                <li>Developed e-discovery platform handling 10K+ daily users</li>
-                                <li>Implemented search functionality with Elasticsearch integration</li>
-                                <li>Reduced API response times by implementing caching with Redis</li>
-                                <li>Collaborated with legal teams to understand domain requirements</li>
-                            </ul>
-                            <div class="flex flex-wrap gap-3">
-                                <span
-                                    class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">REST
-                                    APIs</span>
-                                <span
-                                    class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Microservices</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="mb-24">
-            <div class="relative flex items-center justify-center mb-12">
-                <span class="flex-grow h-0.5 bg-primary"></span>
-                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Projects</h2>
-                <span class="flex-grow h-0.5 bg-primary"></span>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                    <h3 class="text-xl font-bold mb-2">TicTacToe Telnet</h3>
-                    <p class="text-gray-600 mb-4">Multiplayer game with real-time messaging using socket programming.
-                    </p>
-                    <div class="flex flex-wrap gap-3 mb-4">
-                        <span class="skill-pill px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">C++</span>
-                        <span class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Socket
-                            Programming</span>
-                    </div>
-                    <a href="https://github.com/saranshbogati/TicTacToe-Telnet" target="_blank"
-                        class="text-primary font-medium hover:underline">View Project →</a>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                    <h3 class="text-xl font-bold mb-2">Europaa Inventory</h3>
-                    <p class="text-gray-600 mb-4">Inventory management system with real-time tracking.</p>
-                    <div class="flex flex-wrap gap-3 mb-4">
-                        <span
-                            class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">.NET</span>
-                        <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">SQL</span>
-                    </div>
-                    <a href="https://github.com/saranshbogati/Europaa" target="_blank"
-                        class="text-primary font-medium hover:underline">View Project →</a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="mb-16 animate-slide-up">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                    Get In Touch
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 text-center">
-                    <div class="mb-8">
-                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500 to-purple-500 flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <p class="text-xl text-dark-700 dark:text-dark-300 mb-6">I'm currently looking for new opportunities. Feel free to reach out!</p>
-                    </div>
-                    
-                    <div class="flex flex-wrap gap-4 justify-center mb-8">
-                        <a href="mailto:saranshbogati1997@gmail.com"
-                            class="group inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                            <svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                            Email Me
-                        </a>
-                        <a href="https://linkedin.com/in/saransh-bogati" target="_blank"
-                            class="group inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transform hover:scale-105 transition-all duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                            LinkedIn
-                        </a>
-                        <a href="https://github.com/saranshbogati" target="_blank"
-                            class="group inline-flex items-center px-8 py-4 border-2 border-dark-300 dark:border-dark-600 text-dark-700 dark:text-dark-300 font-semibold rounded-xl hover:bg-dark-100 dark:hover:bg-dark-700 transform hover:scale-105 transition-all duration-300">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
-                    
-                    <div class="text-center">
-                        <p class="text-dark-600 dark:text-dark-400">
-                            Email: <a href="mailto:saranshbogati1997@gmail.com"
-                                class="text-primary-600 dark:text-primary-400 hover:underline font-medium">saranshbogati1997@gmail.com</a>
+                <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+                    <div class="animate-fade-in">
+                        <h2
+                            class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-600 via-purple-600 to-primary-800 bg-clip-text text-transparent">
+                            Hi, I'm Saransh
+                        </h2>
+                        <p
+                            class="text-xl md:text-2xl text-dark-600 dark:text-dark-400 max-w-3xl mx-auto mb-8 leading-relaxed">
+                            Computer Science graduate student specializing in backend development and cloud
+                            architecture.
                         </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="/allinone.pdf" download="Saransh_Bogati_Resume.pdf"
+                                class="group inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 group-hover:animate-bounce"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Download Resume
+                            </a>
+                            <a href="#contact"
+                                class="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transform hover:scale-105 transition-all duration-300">
+                                Get In Touch
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="text-center text-dark-500 dark:text-dark-400 py-8 border-t border-dark-200 dark:border-dark-700">
-            <p>© 2024 Saransh Bogati. All rights reserved.</p>
-        </footer>
-    </div>
+                <!-- Scroll indicator -->
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <svg class="w-6 h-6 text-dark-400 dark:text-dark-500" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="mb-24 animate-slide-up">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                        Education
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-dark-900 dark:text-dark-100">Florida State University
+                                </h3>
+                                <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg">Master of
+                                    Science in Computer Science</p>
+                            </div>
+                            <span
+                                class="text-dark-500 dark:text-dark-400 font-medium bg-dark-100 dark:bg-dark-700 px-4 py-2 rounded-lg">
+                                Aug 2023 - May 2025
+                            </span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-dark-700 dark:text-dark-300 font-medium">GPA: 3.6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Skills Section -->
+            <section id="skills" class="mb-24 animate-slide-up">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                        Skills & Expertise
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Languages Card -->
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Languages</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
+                                Python
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-700">
+                                C#
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium border border-yellow-200 dark:border-yellow-700">
+                                JavaScript
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
+                                TypeScript
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium border border-indigo-200 dark:border-indigo-700">
+                                SQL
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks Card -->
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Frameworks</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-pill px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-full text-sm font-medium border border-teal-200 dark:border-teal-700">
+                                FastAPI
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium border border-green-200 dark:border-green-700">
+                                Node.js
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-600">
+                                Express.js
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-700">
+                                .NET
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
+                                SQLAlchemy
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Tools Card -->
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Tools & Platforms</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-pill px-4 py-2 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium border border-orange-200 dark:border-orange-700">
+                                Git
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
+                                Docker
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium border border-orange-200 dark:border-orange-700">
+                                AWS
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-600">
+                                GitHub Actions
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-orange-50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium border border-orange-200 dark:border-orange-700">
+                                <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                                Postman
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                Swagger
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Databases Card -->
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Databases</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-pill px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium border border-indigo-200 dark:border-indigo-700">
+                                PostgreSQL
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
+                                MySQL
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium border border-red-200 dark:border-red-700">
+                                MSSQL
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-medium border border-red-200 dark:border-red-700">
+                                Redis
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Other Skills Card -->
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Other Skills</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-pill px-4 py-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium border border-green-200 dark:border-green-700">
+                                RESTful APIs
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-200 dark:border-purple-700">
+                                CI/CD Pipelines
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
+                                Agile Methodologies
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-teal-50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 rounded-full text-sm font-medium border border-teal-200 dark:border-teal-700">
+                                Microservices
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills Card -->
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark-900 dark:text-dark-100">Soft Skills</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="skill-pill px-4 py-2 bg-pink-50 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full text-sm font-medium border border-pink-200 dark:border-pink-700">
+                                Team Leadership
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-700">
+                                Problem Solving
+                            </span>
+                            <span
+                                class="skill-pill px-4 py-2 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium border border-green-200 dark:border-green-700">
+                                Communication
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                                <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                                Mentoring
+                            </span>
+                            <span
+                                class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm font-medium flex items-center">
+                                <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                                Adaptability
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Experience Section -->
+            <section id="experience" class="mb-24 animate-slide-up">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                        Professional Experience
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="relative">
+                    <!-- Vertical timeline line -->
+                    <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2 md:left-1/2">
+                    </div>
+
+                    <!-- Experience 1 -->
+                    <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                        <!-- Timeline dot -->
+                        <!-- <div
+                            class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
+                        </div> -->
+
+                        <!-- Year marker -->
+                        <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                            <div class="text-lg font-semibold text-gray-500 md:text-right">2022 - 2023</div>
+                        </div>
+
+                        <!-- Experience content -->
+                        <div class="md:w-1/2">
+                            <div
+                                class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700">
+                                <div class="mb-4">
+                                    <h3 class="text-2xl font-bold text-dark-900 dark:text-dark-100 mb-2">Octacore
+                                        Solutions</h3>
+                                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg">Technical
+                                        Lead</p>
+                                </div>
+                                <ul class="space-y-3 mb-6 text-dark-700 dark:text-dark-300">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Led a team of 5 developers to build scalable backend services
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Optimized API response times by 40% through query optimization
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Implemented CI/CD pipelines reducing deployment time by 60%
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Designed microservices architecture for new product line
+                                    </li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm rounded-full">Python</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-sm rounded-full">Node.js</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 text-sm rounded-full">Angular</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 text-sm rounded-full">CI/CD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                        <!-- <div
+                            class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
+                        </div> -->
+
+                        <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                            <div class="text-lg font-semibold text-gray-500 md:text-right">2021 - 2022</div>
+                        </div>
+
+                        <div class="md:w-1/2">
+                            <div
+                                class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700">
+                                <div class="mb-4">
+                                    <h3 class="text-2xl font-bold text-dark-900 dark:text-dark-100 mb-2">Bask Solutions
+                                    </h3>
+                                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg">Software
+                                        Consultant</p>
+                                </div>
+                                <ul class="space-y-3 mb-6 text-dark-700 dark:text-dark-300">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Developed NLP features using Rasa for customer support automation
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Integrated AWS services (EC2, S3, SQS) into existing infrastructure
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Reduced server costs by 30% through resource optimization
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Mentored junior developers in API best practices
+                                    </li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-200 text-sm rounded-full">FastAPI</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 text-sm rounded-full">PostgreSQL</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 text-sm rounded-full">Redis</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 text-sm rounded-full">AWS</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 text-sm rounded-full">Rasa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                        <!-- <div
+                            class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
+                        </div> -->
+
+                        <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                            <div class="text-lg font-semibold text-gray-500 md:text-right">2019 - 2021</div>
+                        </div>
+
+                        <div class="md:w-1/2">
+                            <div
+                                class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700">
+                                <div class="mb-4">
+                                    <h3 class="text-2xl font-bold text-dark-900 dark:text-dark-100 mb-2">Nepasoft
+                                        Solutions Pvt Ltd</h3>
+                                    <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg">Full Stack
+                                        Developer</p>
+                                </div>
+                                <ul class="space-y-3 mb-6 text-dark-700 dark:text-dark-300">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Developed e-discovery platform handling 10K+ daily users
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Implemented search functionality with Elasticsearch integration
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Reduced API response times by implementing caching with Redis
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"
+                                            fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        Collaborated with legal teams to understand domain requirements
+                                    </li>
+                                </ul>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm rounded-full">.NET</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 text-sm rounded-full">Angular</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 text-sm rounded-full">PostgreSQL</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 text-sm rounded-full">REST
+                                        APIs</span>
+                                    <span
+                                        class="skill-pill px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-sm rounded-full">Microservices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Projects -->
+            <section id="projects" class="mb-24">
+                <div class="relative flex items-center justify-center mb-12">
+                    <span class="flex-grow h-0.5 bg-primary"></span>
+                    <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Projects</h2>
+                    <span class="flex-grow h-0.5 bg-primary"></span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div
+                        class="bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 hover:shadow-md transition">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">TicTacToe Telnet</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Multiplayer game with real-time messaging using socket programming.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <span
+                                class="skill-pill px-3 py-1 bg-gray-100 text-gray-800 dark:bg-dark-700 dark:text-gray-200 text-sm rounded-full">
+                                C++
+                            </span>
+                            <span
+                                class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-sm rounded-full">
+                                Socket Programming
+                            </span>
+                        </div>
+                        <a href="https://github.com/saranshbogati/TicTacToe-Telnet" target="_blank"
+                            class="text-primary font-medium hover:underline">View Project →</a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div
+                        class="bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 hover:shadow-md transition">
+                        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">Europaa Inventory</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Inventory management system with real-time tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <span
+                                class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 text-sm rounded-full">
+                                .NET
+                            </span>
+                            <span
+                                class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200 text-sm rounded-full">
+                                SQL
+                            </span>
+                        </div>
+                        <a href="https://github.com/saranshbogati/Europaa" target="_blank"
+                            class="text-primary font-medium hover:underline">View Project →</a>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Contact Section -->
+            <section id="contact" class="mb-16 animate-slide-up">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                        Get In Touch
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div
+                        class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700 text-center">
+                        <div class="mb-8">
+                            <div
+                                class="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500 to-purple-500 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p class="text-xl text-dark-700 dark:text-dark-300 mb-6">I'm currently looking for new
+                                opportunities. Feel free to reach out!</p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 justify-center mb-8">
+                            <a href="mailto:saranshbogati1997@gmail.com"
+                                class="group inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                                <svg class="w-5 h-5 mr-2 group-hover:animate-bounce" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                Email Me
+                            </a>
+                            <a href="https://linkedin.com/in/saransh-bogati" target="_blank"
+                                class="group inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transform hover:scale-105 transition-all duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/saranshbogati" target="_blank"
+                                class="group inline-flex items-center px-8 py-4 border-2 border-dark-300 dark:border-dark-600 text-dark-700 dark:text-dark-300 font-semibold rounded-xl hover:bg-dark-100 dark:hover:bg-dark-700 transform hover:scale-105 transition-all duration-300">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+
+                        <div class="text-center">
+                            <p class="text-dark-600 dark:text-dark-400">
+                                Email: <a href="mailto:saranshbogati1997@gmail.com"
+                                    class="text-primary-600 dark:text-primary-400 hover:underline font-medium">saranshbogati1997@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer
+                class="text-center text-dark-500 dark:text-dark-400 py-8 border-t border-dark-200 dark:border-dark-700">
+                <p>© 2024 Saransh Bogati. All rights reserved.</p>
+            </footer>
+        </div>
     </div>
 
     <!-- JavaScript -->
@@ -747,9 +955,9 @@
         const html = document.documentElement;
 
         // Check for saved dark mode preference or default to light mode
-        const darkMode = localStorage.getItem('darkMode') === 'true' || 
-                        (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        
+        const darkMode = localStorage.getItem('darkMode') === 'true' ||
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
         // Apply dark mode on page load
         if (darkMode) {
             html.classList.add('dark');
@@ -762,7 +970,7 @@
             html.classList.toggle('dark');
             const isDark = html.classList.contains('dark');
             localStorage.setItem('darkMode', isDark);
-            
+
             if (isDark) {
                 sunIcon.classList.remove('hidden');
                 moonIcon.classList.add('hidden');
