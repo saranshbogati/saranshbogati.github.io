@@ -1,25 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Saransh Bogati - Software Engineer specializing in backend development and cloud architecture. Computer Science graduate student with expertise in Python, Node.js, and AWS.">
-    <meta name="keywords" content="Saransh Bogati, Software Engineer, Backend Developer, Python, Node.js, AWS, Cloud Architecture">
-    <meta name="author" content="Saransh Bogati">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://saranshbogati.com/">
-    <meta property="og:title" content="Saransh Bogati | Software Engineer">
-    <meta property="og:description" content="Computer Science graduate student specializing in backend development and cloud architecture.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://saranshbogati.com/">
-    <meta property="twitter:title" content="Saransh Bogati | Software Engineer">
-    <meta property="twitter:description" content="Computer Science graduate student specializing in backend development and cloud architecture.">
-    
     <title>Saransh Bogati | Software Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
@@ -27,7 +15,6 @@
     <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -46,6 +33,7 @@
                             800: '#1e40af',
                             900: '#1e3a8a',
                         },
+                        secondary: '#1e40af',
                         dark: {
                             50: '#f8fafc',
                             100: '#f1f5f9',
@@ -57,7 +45,9 @@
                             700: '#334155',
                             800: '#1e293b',
                             900: '#0f172a',
-                        }
+                        },
+                        light: '#f9fafb',
+                        accent: '#3b82f6',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -85,8 +75,11 @@
             }
         }
     </script>
-    
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -219,8 +212,10 @@
     </nav>
 
     <div class="pt-20">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+
         <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden mb-24">
             <!-- Background gradient -->
             <div class="absolute inset-0 gradient-bg opacity-10"></div>
             
@@ -262,3 +257,605 @@
                 </svg>
             </div>
         </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-24 animate-slide-up">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+                    Education
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="card-hover bg-white dark:bg-dark-800 p-8 rounded-2xl shadow-lg border border-dark-200 dark:border-dark-700">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-dark-900 dark:text-dark-100">Florida State University</h3>
+                            <p class="text-primary-600 dark:text-primary-400 font-semibold text-lg">Master of Science in Computer Science</p>
+                        </div>
+                        <span class="text-dark-500 dark:text-dark-400 font-medium bg-dark-100 dark:bg-dark-700 px-4 py-2 rounded-lg">
+                            Aug 2023 - May 2025 (Expected)
+                        </span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-dark-700 dark:text-dark-300 font-medium">GPA: 3.67</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills -->
+        <section id="skills" class="mb-24">
+
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Skills</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Languages Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Python
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            C#
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                            JavaScript
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            TypeScript
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                            SQL
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Frameworks Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-green-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+                            FastAPI
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Node.js
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-gray-500 rounded-full mr-2"></span>
+                            Express.js
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            .NET
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            SQLAlchemy
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Tools Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-orange-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Tools & Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                            Git
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Docker
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-orange-400 rounded-full mr-2"></span>
+                            AWS
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-gray-500 rounded-full mr-2"></span>
+                            GitHub Actions
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                            Postman
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Swagger
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Databases Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-indigo-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                            PostgreSQL
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            MySQL
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                            MSSQL
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-red-50 text-red-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-red-400 rounded-full mr-2"></span>
+                            Redis
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Other Skills Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-teal-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Other Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            RESTful APIs
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            CI/CD Pipelines
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Agile Methodologies
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+                            Microservices
+                        </span>
+                    </div>
+                </div>
+                <!-- Soft Skills Card -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 border-l-4 border-pink-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                            Team Leadership
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                            Problem Solving
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Communication
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                            Mentoring
+                        </span>
+                        <span
+                            class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-full text-sm font-medium flex items-center">
+                            <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                            Adaptability
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience -->
+        <section id="experience" class="mb-24">
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Professional Experience</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
+
+            <div class="relative">
+                <!-- Vertical timeline line -->
+                <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2 md:left-1/2">
+                </div>
+
+                <!-- Experience 1 -->
+                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                    <!-- Timeline dot -->
+                    <div
+                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
+                    </div>
+
+                    <!-- Year marker -->
+                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                        <div class="text-lg font-semibold text-gray-500 md:text-right">2022 - 2023</div>
+                    </div>
+
+                    <!-- Experience content -->
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="text-xl font-bold mb-2">Octacore Solutions</h3>
+                            <p class="text-accent font-medium mb-4">Technical Lead</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
+                                <li>Led a team of 5 developers to build scalable backend services</li>
+                                <li>Optimized API response times by 40% through query optimization</li>
+                                <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                                <li>Designed microservices architecture for new product line</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Python</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Node.js</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                    <div
+                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
+                    </div>
+
+                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                        <div class="text-lg font-semibold text-gray-500 md:text-right">2021 - 2022</div>
+                    </div>
+
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="text-xl font-bold mb-2">Bask Solutions</h3>
+                            <p class="text-accent font-medium mb-4">Software Consultant</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
+                                <li>Developed NLP features using Rasa for customer support automation</li>
+                                <li>Integrated AWS services (EC2, S3, SQS) into existing infrastructure</li>
+                                <li>Reduced server costs by 30% through resource optimization</li>
+                                <li>Mentored junior developers in API best practices</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="skill-pill px-3 py-1 bg-teal-100 text-teal-800 text-sm rounded-full">FastAPI</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Redis</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">AWS</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">Rasa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="relative mb-12 pl-10 md:pl-0 md:flex md:odd:flex-row-reverse">
+                    <div
+                        class="absolute left-0 w-8 h-8 rounded-full bg-primary border-4 border-white transform -translate-x-1/2 md:left-1/2">
+                    </div>
+
+                    <div class="md:w-1/2 md:px-8 mb-4 md:mb-0">
+                        <div class="text-lg font-semibold text-gray-500 md:text-right">2019 - 2021</div>
+                    </div>
+
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h3 class="text-xl font-bold mb-2">Nepasoft Solutions Pvt Ltd</h3>
+                            <p class="text-accent font-medium mb-4">Full Stack Developer</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-700">
+                                <li>Developed e-discovery platform handling 10K+ daily users</li>
+                                <li>Implemented search functionality with Elasticsearch integration</li>
+                                <li>Reduced API response times by implementing caching with Redis</li>
+                                <li>Collaborated with legal teams to understand domain requirements</li>
+                            </ul>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">.NET</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full">Angular</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">PostgreSQL</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">REST
+                                    APIs</span>
+                                <span
+                                    class="skill-pill px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Microservices</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="mb-24">
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Projects</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-bold mb-2">TicTacToe Telnet</h3>
+                    <p class="text-gray-600 mb-4">Multiplayer game with real-time messaging using socket programming.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="skill-pill px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">C++</span>
+                        <span class="skill-pill px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Socket
+                            Programming</span>
+                    </div>
+                    <a href="https://github.com/saranshbogati/TicTacToe-Telnet" target="_blank"
+                        class="text-primary font-medium hover:underline">View Project →</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                    <h3 class="text-xl font-bold mb-2">Europaa Inventory</h3>
+                    <p class="text-gray-600 mb-4">Inventory management system with real-time tracking.</p>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span
+                            class="skill-pill px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">.NET</span>
+                        <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 text-sm rounded-full">SQL</span>
+                    </div>
+                    <a href="https://github.com/saranshbogati/Europaa" target="_blank"
+                        class="text-primary font-medium hover:underline">View Project →</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="mb-16">
+            <div class="relative flex items-center justify-center mb-12">
+                <span class="flex-grow h-0.5 bg-primary"></span>
+                <h2 class="text-3xl font-bold mx-4 text-primary px-4 text-center">Get in touch</h2>
+                <span class="flex-grow h-0.5 bg-primary"></span>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm text-center">
+                <p class="mb-6">I'm currently looking for new opportunities. Feel free to reach out!</p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="mailto:saranshbogati1997@gmail.com"
+                        class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition">
+                        Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/saransh-bogati" target="_blank"
+                        class="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-blue-50 transition">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/saranshbogati" target="_blank"
+                        class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition">
+                        GitHub
+                    </a>
+                </div>
+                <p class="mt-6 text-gray-600">
+                    Email: <a href="mailto:saranshbogati1997@gmail.com"
+                        class="text-primary hover:underline">saranshbogati1997@gmail.com</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-dark-500 dark:text-dark-400 py-8 border-t border-dark-200 dark:border-dark-700">
+            <p>© 2024 Saransh Bogati. All rights reserved.</p>
+        </footer>
+    </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Dark mode functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const html = document.documentElement;
+
+        // Check for saved dark mode preference or default to light mode
+        const darkMode = localStorage.getItem('darkMode') === 'true' || 
+                        (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        
+        // Apply dark mode on page load
+        if (darkMode) {
+            html.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        }
+
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('darkMode', isDark);
+            
+            if (isDark) {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        });
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Loading screen
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+            loading.style.opacity = '0';
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 300);
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(section);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'dark:bg-dark-900/95');
+                nav.classList.remove('bg-white/80', 'dark:bg-dark-900/80');
+            } else {
+                nav.classList.remove('bg-white/95', 'dark:bg-dark-900/95');
+                nav.classList.add('bg-white/80', 'dark:bg-dark-900/80');
+            }
+        });
+    </script>
+</body>
+
+</html>
